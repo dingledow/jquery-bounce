@@ -25,11 +25,10 @@ In the &lt;head&gt; of your document, link jQuery, Easing and Bounce.
 Then in your javascript, configure the objects you want to bounce. You can specify groups of ojects by classname, tag or single objects by their element id.
 
 ```javascript
-// bounce all objects with the 'bounce' class
 // basic usage with no customizations
 $('.simple').bounce();
 
-// customize the effects
+// bounce all objects with the 'bounce' class and customize effect
 $('.bounce').bounce({
 	distance: '25px', // distance to move
 	downspeed: 450, // speed to move to ending point
