@@ -5,6 +5,66 @@ A jQuery plugin for bouncing objects
 
 Watch, fork and pull from: [https://github.com/ghepting/jQuery-Bounce]
 
+
+## Dependencies
+
+**[jQuery](http://jquery.com/)**
+**[jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/)**
+
+
+## Usage
+
+In the &lt;head&gt; of your document, link jQuery, Easing and Bounce.
+
+```html
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="./js/jquery.bounce.js"></script>
+```
+
+Then in your javascript, configure the objects you want to bounce. You can specify groups of ojects by classname, tag or single objects by their element id.
+
+```javascript
+// bounce all objects with the 'bounce' class
+$('.bounce').bounce({
+	distance: '25px', // distance to move
+	downspeed: 450, // speed to move to ending point
+	upspeed: 200, // speed to return to starting point
+	gravity: 'bottom', // direction to move object (top or bottom)
+	timer: 600, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+	loop: 0, // number of times to loop bouncing animation
+	easingdown: 'easeInExpo', // easing to ending point
+	easingup: 'jswing' // easing back to starting point
+});
+// bounce the object with the element id 'ball'
+$('#ball').bounce({
+	distance: '50px', // distance to move
+	downspeed: 400, // speed to move to ending point
+	upspeed: 600, // speed to return to starting point
+	gravity: 'bottom', // direction to move object (top or bottom)
+	timer: 1000, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+	loop: 0, // number of times to loop bouncing animation
+	easingdown: 'easeInExpo', // easing to ending point
+	easingup: 'easeOutExpo' // easing back to starting point
+});
+```
+
+
+How to use
+=========
+
+Options:
+
+distance: '25px',			// distance to move
+downspeed: 450,				// speed to move to ending point
+upspeed: 200,				// speed to return to starting point
+gravity: 'bottom',			// direction to move object (top or bottom)
+timer: 600,					// delay to repeat bounce (should be minimum of downspeed + upspeed)
+loop: 0,					// number of times to loop bouncing animation
+easingdown: 'easeInExpo',	// easing to ending point
+easingup: 'jswing' 			// easing back to starting point
+
+
 Changelog
 ---------
 
