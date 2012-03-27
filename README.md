@@ -1,7 +1,7 @@
-jQuery-Bounce
+jQuery-Bounce (BETA)
 =========
 
-A jQuery plugin for bouncing objects
+A jQuery plugin for bouncing objects by Gary Hepting
 
 Watch, fork and pull from: [https://github.com/ghepting/jQuery-Bounce]
 
@@ -26,16 +26,21 @@ Then in your javascript, configure the objects you want to bounce. You can speci
 
 ```javascript
 // bounce all objects with the 'bounce' class
+// basic usage with no customizations
+$('.simple').bounce();
+
+// customize the effects
 $('.bounce').bounce({
 	distance: '25px', // distance to move
 	downspeed: 450, // speed to move to ending point
 	upspeed: 200, // speed to return to starting point
-	gravity: 'bottom', // direction to move object (top or bottom)
-	timer: 600, // delay to repeat bounce (should be minimum of downspeed + upspeed)
-	loop: 0, // number of times to loop bouncing animation
+	gravity: 'top', // direction to move object (top or bottom)
+	timer: 650, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+	loop: 5, // number of times to loop bouncing animation
 	easingdown: 'easeInExpo', // easing to ending point
 	easingup: 'jswing' // easing back to starting point
 });
+
 // bounce the object with the element id 'ball'
 $('#ball').bounce({
 	distance: '50px', // distance to move
@@ -88,6 +93,6 @@ $('#ball').bounce('start');
 Changelog
 ---------
 
-**v0.1**
+**Beta v0.1**
 
  * Setup initial working concept
