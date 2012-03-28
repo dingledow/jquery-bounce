@@ -60,12 +60,19 @@ How to use
 Options:
 
 `distance` &mdash; (pixels) distance to move
+
 `downspeed` &mdash; (milliseconds) speed to move to ending point
-vupspeed` &mdash; (milliseconds) speed to return to starting point
+
+`vupspeed` &mdash; (milliseconds) speed to return to starting point
+
 `gravity` &mdash; direction to move object (top or bottom)
+
 `timer` &mdash; (milliseconds) delay to repeat bounce (should be minimum of downspeed + upspeed)
+
 `loop` &mdash; (integer) number of times to loop bouncing animation
+
 `easingdown` &mdash; easing to ending point (i.e. - 'easeInExpo')
+
 `easingup` &mdash; easing back to starting point (i.e. - 'jswing')
 
 
