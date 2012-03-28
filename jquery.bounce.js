@@ -12,11 +12,15 @@
 					downspeed: 450, // speed to move to ending point
 					upspeed: 200, // speed to return to starting point
 					gravity: 'bottom', // direction to move object (top or bottom)
-					timer: 600, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+					timer: 650, // delay to repeat bounce (should be minimum of downspeed + upspeed)
 					loop: 0, // number of times to loop bouncing animation
 					easingdown: 'easeInExpo', // easing to ending point
 					easingup: 'jswing' // easing back to starting point
 				};
+
+				if(defaults.timer < defaults.downspeed+defaults.upspeed) {
+					defaults.timer = defaults.downspeed+defaults.upspeed;
+				}
 
 				if (options == 'stop') {
 					clearInterval(obj.interval);
