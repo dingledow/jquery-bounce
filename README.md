@@ -4,6 +4,7 @@ jQuery-Bounce (BETA)
 A jQuery plugin for bouncing objects by Gary Hepting
 
 Watch, fork and pull from: [https://github.com/ghepting/jQuery-Bounce]
+Demos available at: [http://ghepting.github.com/jQuery-Bounce]
 
 
 ## Dependencies

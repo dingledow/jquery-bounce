@@ -14,8 +14,8 @@
 	<title>jQuery-Bounce by Gary Hepting</title>
 	<meta name="description" content="jQuery-Bounce" />
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.easing-1.3.min.js"></script>
-	<script type="text/javascript" src="jquery.bounce.js"></script>
+	<script type="text/javascript" src="../jquery.easing-1.3.min.js"></script>
+	<script type="text/javascript" src="../jquery.bounce.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			
@@ -50,6 +50,17 @@
 				loop: 0, // number of times to loop bouncing animation
 				easingdown: 'easeOutBounce', // easing to ending point
 				easingup: 'easeOutExpo' // easing back to starting point
+			});
+
+			$('#buoy').bounce({
+				distance: '15px', // distance to move
+				downspeed: 950, // speed to move to ending point
+				upspeed: 650, // speed to return to starting point
+				gravity: 'bottom', // direction to move object (top or bottom)
+				timer: 1700, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+				loop: 0, // number of times to loop bouncing animation
+				easingdown: 'jswing', // easing to ending point
+				easingup: 'easeInCirc' // easing back to starting point
 			});
 
 		});
@@ -154,6 +165,24 @@ $('#bungie').bounce({
 	loop: 3,
 	easingdown: 'easeOutBounce',
 	easingup: 'easeOutExpo'
+});
+	</code>
+</pre>
+		</div>
+
+		<div class="demo">
+			<img id="buoy" src="./buoy.png" alt="jQuery Bouncing Buoy" />
+<pre>
+	<code>
+$('#buoy').bounce({
+	distance: '15px',
+	downspeed: 950,
+	upspeed: 650,
+	gravity: 'bottom',
+	timer: 1700,
+	loop: 0,
+	easingdown: 'jswing',
+	easingup: 'easeInCirc'
 });
 	</code>
 </pre>
