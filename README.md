@@ -63,7 +63,7 @@ Options:
 
 `downspeed` &mdash; (milliseconds) speed to move to ending point
 
-`vupspeed` &mdash; (milliseconds) speed to return to starting point
+`upspeed` &mdash; (milliseconds) speed to return to starting point
 
 `gravity` &mdash; direction to move object (top or bottom)
 
