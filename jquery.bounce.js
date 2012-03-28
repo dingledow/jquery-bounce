@@ -29,7 +29,7 @@
 					return this.each(function() {
 						obj = $(this);
 						obj.interval = setInterval(function() {
-							obj.stop().animate({'margin-top': defaults.distance, 'opacity': '1'}, defaults.downspeed, defaults.easingdown).animate({'margin-top': '0px', 'opacity': '1'}, defaults.upspeed, defaults.easingup);
+							obj.stop().animate({'margin-top': (defaults.gravity == 'top' ? '-' : '')+defaults.distance, 'opacity': '1'}, defaults.downspeed, defaults.easingdown).animate({'margin-top': '0', 'opacity': '1'}, defaults.upspeed, defaults.easingup);
 						}, defaults.timer);
 	    			});
 				}
@@ -39,7 +39,7 @@
 				return this.each(function() {
 					obj = $(this);
 					obj.interval = setInterval(function() {
-						obj.stop().animate({'margin-top': defaults.distance, 'opacity': '1'}, defaults.downspeed, defaults.easingdown).animate({'margin-top': '0px', 'opacity': '1'}, defaults.upspeed, defaults.easingup);
+						obj.stop().animate({'margin-top': (defaults.gravity == 'top' ? '-' : '')+defaults.distance, 'opacity': '1'}, defaults.downspeed, defaults.easingdown).animate({'margin-top': '0', 'opacity': '1'}, defaults.upspeed, defaults.easingup);
 					}, defaults.timer);
 					if(defaults.loop > 0) {
 						obj.timeout = setTimeout(function() {
