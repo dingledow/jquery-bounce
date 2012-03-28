@@ -1,0 +1,177 @@
+<!doctype html>
+<!--
+................................................................................
+................................................................................
+................................................................................
+.......................... jQuery-Bounce by Gary Hepting .......................
+................................................................................
+................................................................................
+................................................................................
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery-Bounce by Gary Hepting</title>
+	<meta name="description" content="jQuery-Bounce" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easing-1.3.min.js"></script>
+	<script type="text/javascript" src="jquery.bounce.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$('#ball').bounce({
+				distance: '20px', // distance to move
+				downspeed: 300, // speed to move to ending point
+				upspeed: 300, // speed to return to starting point
+				gravity: 'bottom', // direction to move object (top or bottom)
+				timer: 600, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+				loop: 0, // number of times to loop bouncing animation
+				easingdown: 'easeInExpo', // easing to ending point
+				easingup: 'jswing' // easing back to starting point
+			});
+
+			$('#balloon').bounce({
+				distance: '10px', // distance to move
+				downspeed: 150, // speed to move to ending point
+				upspeed: 150, // speed to return to starting point
+				gravity: 'top', // direction to move object (top or bottom)
+				timer: 300, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+				loop: 3, // number of times to loop bouncing animation
+				easingdown: 'easeInCirc', // easing to ending point
+				easingup: 'easeInCirc' // easing back to starting point
+			});
+
+			$('#bungie').bounce({
+				distance: '50px', // distance to move
+				downspeed: 400, // speed to move to ending point
+				upspeed: 400, // speed to return to starting point
+				gravity: 'bottom', // direction to move object (top or bottom)
+				timer: 800, // delay to repeat bounce (should be minimum of downspeed + upspeed)
+				loop: 0, // number of times to loop bouncing animation
+				easingdown: 'easeOutBounce', // easing to ending point
+				easingup: 'easeOutExpo' // easing back to starting point
+			});
+
+		});
+	</script>
+	<style type="text/css">
+		html, body {
+			margin:0;
+			padding:0;
+		}
+		#page {
+			margin:0 auto;
+			padding:0 10px;
+		}
+		.demo {
+			display:block;
+			float:left;
+			width:31%;
+			min-width:300px;
+			max-width:500px;
+			margin:1%;
+			border-radius:10px;
+		}
+		.demo img {
+			display:block;
+			margin:0 auto;
+		}
+		.container {
+			height:175px;
+		}
+		pre {
+			font-size: small;
+			border-left:5px solid #ccc;
+			padding:15px;
+			background-color:#eee;
+			margin-top:10px;
+			overflow:auto;
+		}
+		div.clear {
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<noscript>
+			<h1>Javascript must be enabled for this demonstration.</h1>
+		</noscript>
+		<h1>jQuery-Bounce Demo</h1>
+
+		<div class="clear"></div>
+		
+
+		<h3>Overview</h3>
+
+		<div class="clear"></div>
+		
+
+		<h3>How to use</h3>
+
+		<div class="clear"></div>
+		
+
+		<h3>Demos</h3>
+
+		<div class="demo">
+			<img id="ball" src="./ball.png" alt="jQuery Bouncing Ball" />
+<pre>
+	<code>
+$('#ball').bounce();
+	</code>
+</pre>
+		</div>
+
+		<div class="demo">
+			<img id="balloon" src="./balloon.png" alt="jQuery Bouncing Balloon" />
+<pre>
+	<code>
+$('#balloon').bounce({
+	distance: '10px',
+	downspeed: 150,
+	upspeed: 150,
+	gravity: 'top',
+	timer: 300,
+	loop: 0,
+	easingdown: 'easeInCirc',
+	easingup: 'easeInCirc'
+});
+	</code>
+</pre>
+		</div>
+
+		<div class="demo">
+			<img id="bungie" src="./bungie.png" alt="jQuery Bungie Cord" />
+<pre>
+	<code>
+$('#bungie').bounce({
+	distance: '50px',
+	downspeed: 400,
+	upspeed: 400,
+	gravity: 'bottom',
+	timer: 800,
+	loop: 3,
+	easingdown: 'easeOutBounce',
+	easingup: 'easeOutExpo'
+});
+	</code>
+</pre>
+		</div>
+
+		<div class="clear"></div>
+
+		<h3>Dependencies</h3>
+		<h4>jQuery</h4>
+		<p>Like any jQuery Plugin, the jQuery library is required for jQuery-Bounce to work. I recomend using the Google CDN of the latest stable. Currently 1.7.1 found here: <a href="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js</a></p>
+
+		<div class="clear"></div>
+		
+		<h4>Easing</h4>
+		<p>To achieve a natural bouncing effect, easing is used in the animations. The Easing Plugin is required for jQuery-Bounce to work.</p>
+
+		<div class="clear"></div>
+
+	</div>
+</body>
+</html>
